@@ -43,6 +43,7 @@ html[lang="zh"]{--display:'Noto Sans SC',sans-serif;--body:'Noto Sans SC',sans-s
 html[lang="zh"] .display{font-weight:900;letter-spacing:.02em;}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
+html,body{overflow-x:hidden;max-width:100%;}
 body{
   background:var(--ink);
   color:var(--text);
@@ -364,6 +365,7 @@ footer .logo img{height:24px;}
 
 /* ===== interactive world map (svgMap overrides) ===== */
 #krxMapWrap{border:1px solid var(--line);background:var(--panel);overflow:hidden;}
+#krxMap{min-height:200px;aspect-ratio:2/1;}
 .svgMap-map-wrapper{background:transparent!important;}
 .svgMap-map-wrapper .svgMap-map-image{background:transparent;}
 .svgMap-map-wrapper .svgMap-country{stroke:#0a0a0b;stroke-width:.6;transition:fill .2s;}
@@ -479,6 +481,7 @@ h2.display.rv.in{animation:titleWipe 1.15s cubic-bezier(.22,1,.36,1) both;}
 .geo-num{animation:numGlow 2.4s ease-in-out infinite;display:inline-block;}
 @keyframes numGlow{0%,100%{text-shadow:0 0 0 rgba(255,90,80,0);transform:scale(1);}50%{text-shadow:0 0 22px rgba(255,90,80,.95),0 0 60px rgba(225,6,0,.7);transform:scale(1.05);}}
 /* ambient red orb drifting behind the partnership tiers */
+#partner{overflow:hidden;}
 #partner::before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;top:-8%;right:-10%;
   background:radial-gradient(circle,rgba(225,6,0,.18),transparent 70%);filter:blur(40px);
   animation:orb 8s ease-in-out infinite alternate;pointer-events:none;}
@@ -546,6 +549,16 @@ body::after{content:"";position:fixed;inset:0;z-index:998;pointer-events:none;op
   font-family:var(--display);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
   color:#fff;padding:7px 12px;border-left:2px solid var(--red);}
 @media(max-width:860px){.vids{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto;}}
+/* ===== mobile motion calm-down ===== */
+@media(max-width:860px){
+  .rv{transform:translateY(14px);}
+  .feat .feat-img.rv,.feat .rv:not(.feat-img),
+  .feat.rev .feat-img.rv,.feat.rev .rv:not(.feat-img){transform:translateY(18px);}
+  h2.display.rv.in{animation:none;}
+  .hero::after{width:420px;height:420px;}
+  #partner::before,#partner::after{width:320px;height:320px;}
+  .stats::after,#products::before,.contact::before{width:320px;height:320px;}
+}
 /* reveal */
 .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease;}
 .rv.in{opacity:1;transform:none;}
@@ -1358,7 +1371,8 @@ const io = new IntersectionObserver(entries=>{
     // stagger siblings revealed in the same container
     const sibs = Array.from(el.parentElement.children).filter(c=>c.classList && c.classList.contains("rv"));
     const idx = Math.max(0, sibs.indexOf(el));
-    el.style.transitionDelay = Math.min(idx*90, 450) + "ms";
+    var mob = window.matchMedia("(max-width:860px)").matches;
+    el.style.transitionDelay = Math.min(idx*(mob?50:90), mob?200:450) + "ms";
     el.classList.add("in");
     el.addEventListener("transitionend", function te(){ el.style.transitionDelay=""; el.removeEventListener("transitionend", te); });
     io.unobserve(el);
