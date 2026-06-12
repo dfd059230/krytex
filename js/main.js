@@ -296,7 +296,7 @@ const io = new IntersectionObserver(entries=>{
     // stagger siblings revealed in the same container
     const sibs = Array.from(el.parentElement.children).filter(c=>c.classList && c.classList.contains("rv"));
     const idx = Math.max(0, sibs.indexOf(el));
-    var mob = window.matchMedia("(max-width:860px)").matches;
+    var mob = window.matchMedia("(max-width:640px)").matches;
     el.style.transitionDelay = Math.min(idx*(mob?50:90), mob?200:450) + "ms";
     el.classList.add("in");
     el.addEventListener("transitionend", function te(){ el.style.transitionDelay=""; el.removeEventListener("transitionend", te); });
