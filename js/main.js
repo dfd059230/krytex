@@ -245,10 +245,18 @@ en:{
 };
 
 let lang = "zh";
+const META = {
+  zh: ["KRYTEX——欧洲高端汽车养护品牌 | 陶瓷镀晶·诚邀合作", "KRYTEX——欧洲高端汽车养护品牌:陶瓷镀晶、抛光剂与养护产品。正式进入中国市场,诚邀经销商与分销商合作。"],
+  ru: ["KRYTEX — премиальная европейская автохимия | Партнёрам в Китае", "KRYTEX — керамические покрытия, полироли и автохимия премиум-класса. Открываем сотрудничество с дилерами и дистрибьюторами в Китае."],
+  en: ["KRYTEX — Premium European Auto Care | Partners in China", "KRYTEX — premium ceramic coatings, polishes and car care. Now open to dealers and distributors across China."]
+};
 function applyLang(l){
   lang = l;
   const d = I18N[l];
   document.documentElement.lang = l;
+  document.title = META[l][0];
+  const md = document.querySelector('meta[name="description"]');
+  if(md) md.setAttribute('content', META[l][1]);
   document.querySelectorAll("[data-i18n]").forEach(el=>{
     const k = el.getAttribute("data-i18n");
     if(d[k] !== undefined) el.textContent = d[k];
