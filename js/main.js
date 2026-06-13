@@ -483,69 +483,46 @@ function setupCities(){
   });
 })();
 
-// ── FORM ──────────────────────────────────────────────────────────────────
-// Formspree: зарегистрируйтесь на https://formspree.io → New Form → скопируйте endpoint.
-// Замените строку ниже на свой адрес вида https://formspree.io/f/XXXXXXXX
-const FORM_ENDPOINT = "https://formspree.io/f/REPLACE_WITH_YOUR_ID";
-
+// ── FORM: мультиязычные сообщения Formspree ────────────────────────────────
+// Отправку и показ блоков делает @formspree/ajax (CDN). Библиотека вставляет
+// ответ на одном языке — мы следим за блоками и подменяем текст нашим переводом
+// (form.ok / form.err) под текущий язык интерфейса.
 (function(){
-  var btn  = document.getElementById("sendBtn");
-  var ok   = document.getElementById("formOk");
-  var fields = {name:"f-name", email:"f-email", phone:"f-phone"};
+  var okEl  = document.querySelector('[data-fs-success]');
+  var errEl = document.querySelector('.form-err[data-fs-error]');
 
-  function validate(){
-    var pass = true;
-    Object.entries(fields).forEach(function([,id]){
-      var el = document.getElementById(id);
-      var v  = el.value.trim();
-      el.style.borderColor = v ? "" : "var(--red)";
-      if(!v) pass = false;
-    });
-    return pass;
+  // Подменить текст блока на перевод. Если текст уже равен переводу — выходим
+  // (это и разрывает повторное срабатывание observer'а).
+  function localize(el, key){
+    if(!el || el.textContent.trim() === '') return;
+    var msg = (I18N[lang] && I18N[lang][key]) || el.textContent;
+    if(el.textContent !== msg) el.textContent = msg;
   }
 
-  function setLoading(on){
-    btn.disabled = on;
-    var span = btn.querySelector("span[data-i18n='form.btn']");
-    if(span) span.textContent = on
-      ? (I18N[lang]["form.sending"] || "…")
-      : (I18N[lang]["form.btn"] || "Send");
+  function watch(el, key){
+    if(!el) return;
+    new MutationObserver(function(){ localize(el, key); })
+      .observe(el, {childList:true, characterData:true, subtree:true});
+  }
+  watch(okEl,  "form.ok");
+  watch(errEl, "form.err");
+
+  // Кнопка: библиотека блокирует её на время отправки — меняем текст на «Отправка…».
+  var submitBtn = document.querySelector('[data-fs-submit-btn]');
+  var btnLabel  = submitBtn && submitBtn.querySelector('[data-i18n="form.btn"]');
+  if(submitBtn && btnLabel){
+    new MutationObserver(function(){
+      btnLabel.textContent = submitBtn.disabled
+        ? (I18N[lang]["form.sending"] || "…")
+        : (I18N[lang]["form.btn"] || btnLabel.textContent);
+    }).observe(submitBtn, {attributes:true, attributeFilter:["disabled"]});
   }
 
-  btn.addEventListener("click", function(){
-    if(!validate()) return;
-
-    var payload = {
-      name:    document.getElementById("f-name").value.trim(),
-      email:   document.getElementById("f-email").value.trim(),
-      phone:   document.getElementById("f-phone").value.trim(),
-      company: document.getElementById("f-company").value.trim(),
-      message: document.getElementById("f-msg").value.trim(),
-      lang:    lang
-    };
-
-    setLoading(true);
-    fetch(FORM_ENDPOINT, {
-      method: "POST",
-      headers: {"Content-Type":"application/json", "Accept":"application/json"},
-      body: JSON.stringify(payload)
-    })
-    .then(function(r){
-      if(r.ok){
-        ok.classList.add("show");
-        ["f-name","f-email","f-phone","f-company","f-msg"].forEach(function(id){
-          document.getElementById(id).value = "";
-        });
-      } else {
-        return r.json().then(function(d){ throw new Error(d.error || r.status); });
-      }
-    })
-    .catch(function(err){
-      console.error("Form error:", err);
-      ok.style.color = "#ff6b6b";
-      ok.textContent = I18N[lang]["form.err"] || "Error. Please try again.";
-      ok.classList.add("show");
-    })
-    .finally(function(){ setLoading(false); });
-  });
+  // Если посетитель сменит язык, когда сообщение уже показано — перевести заново.
+  var prevApply = applyLang;
+  applyLang = function(l){
+    prevApply(l);
+    localize(okEl,  "form.ok");
+    localize(errEl, "form.err");
+  };
 })();

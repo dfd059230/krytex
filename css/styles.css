@@ -116,7 +116,6 @@ header{
   transform:rotate(24deg);box-shadow:0 0 38px rgba(225,6,0,.8);
   animation:beam 7s ease-in-out infinite alternate;
 }
-.beam.b2{right:16%;opacity:.35;animation-delay:1.6s;height:120%;}
 @keyframes beam{from{transform:rotate(24deg) translateX(0);}to{transform:rotate(24deg) translateX(-60px);}}
 .hero-inner{position:relative;z-index:2;padding:130px 24px 44px;}
 .hero h1{font-size:clamp(28px,4.6vw,54px);max-width:16ch;margin-bottom:22px;}
@@ -295,9 +294,13 @@ header{
 }
 .field input:focus,.field textarea:focus{border-color:var(--red);}
 .field textarea{resize:vertical;min-height:84px;}
-.form-ok{display:none;margin-top:18px;color:#7ee2a0;font-size:14.5px;}
-.form-ok.show{display:block;}
-#sendBtn:disabled{opacity:.55;cursor:not-allowed;pointer-events:none;}
+/* Formspree-блоки скрыты, пока библиотека не вставит в них текст */
+[data-fs-success]:empty,.form-err[data-fs-error]:empty,.field-err[data-fs-error]:empty{display:none;}
+.form-ok[data-fs-success]:not(:empty){display:block;margin-bottom:16px;color:#7ee2a0;font-size:14.5px;}
+.form-err[data-fs-error]:not(:empty){display:block;margin-bottom:14px;color:#ff6b6b;font-size:13.5px;}
+.field-err[data-fs-error]:not(:empty){display:block;color:#ff6b6b;font-size:12.5px;margin-top:4px;}
+input[aria-invalid="true"],textarea[aria-invalid="true"]{border-color:var(--red)!important;}
+#sendBtn:disabled,[data-fs-submit-btn]:disabled{opacity:.55;cursor:not-allowed;pointer-events:none;}
 
 /* ===== footer ===== */
 footer{border-top:1px solid var(--line);padding:64px 0 40px;}
@@ -514,6 +517,10 @@ html{scrollbar-color:var(--red) #121214;scrollbar-width:thin;}
   clip-path:polygon(0 0,100% 0,100% calc(100% - 36px),calc(100% - 36px) 100%,0 100%);
   transition:transform .3s,border-color .3s;}
 .vid:hover{transform:translateY(-6px);border-color:rgba(225,6,0,.55);}
+/* clip-path срезает бордер на углу — дорисовываем диагональную линию (как у .btn) */
+.vid::after{content:"";position:absolute;width:38px;height:38px;right:-1px;bottom:-1px;pointer-events:none;z-index:3;
+  background:linear-gradient(135deg,transparent calc(50% - 1px),var(--line) calc(50% - 1px),var(--line) calc(50% + .5px),transparent calc(50% + .5px));transition:background .3s;}
+.vid:hover::after{background:linear-gradient(135deg,transparent calc(50% - 1px),var(--red) calc(50% - 1px),var(--red) calc(50% + .5px),transparent calc(50% + .5px));}
 .vid video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;filter:contrast(1.02);}
 .vid figcaption{position:absolute;left:14px;top:14px;background:rgba(10,10,11,.8);backdrop-filter:blur(4px);
   font-family:var(--display);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
@@ -525,9 +532,7 @@ html{scrollbar-color:var(--red) #121214;scrollbar-width:thin;}
   .feat .feat-img.rv,.feat .rv:not(.feat-img),
   .feat.rev .feat-img.rv,.feat.rev .rv:not(.feat-img){transform:translateY(18px);}
   h2.display.rv.in{animation:none;}
-  .hero::after{width:420px;height:420px;}
-  #partner::before,#partner::after{width:320px;height:320px;}
-  .stats::after,#products::before,.contact::before{width:320px;height:320px;}
+  #partner::before,.contact::before{width:320px;height:320px;}
 }
 /* reveal */
 .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease;}
@@ -584,4 +589,7 @@ html{scrollbar-color:var(--red) #121214;scrollbar-width:thin;}
   .about-img img{height:340px;}
   .quote-img img{height:380px;object-position:center 12%;}
   .langs button{padding:8px 10px;}
+  .foot-grid{grid-template-columns:1fr;gap:32px;}
+  footer{padding-bottom:96px;}
+  .foot-bottom{justify-content:flex-start;}
 }

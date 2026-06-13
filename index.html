@@ -9,22 +9,44 @@
 <meta name="theme-color" content="#e10600">
 <meta name="description" content="KRYTEX——欧洲高端汽车养护品牌:陶瓷镀晶、抛光剂与养护产品。正式进入中国市场,诚邀经销商与分销商合作。">
 <meta name="keywords" content="KRYTEX,陶瓷镀晶,汽车镀晶,汽车养护,纳米涂层,汽车美容,经销商合作,ceramic coating">
-<!-- Замените на ваш реальный домен после привязки: -->
-<link rel="canonical" href="https://krytex.pro/china/">
+<link rel="canonical" href="https://krytex.world/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="KRYTEX">
+<meta property="og:url" content="https://krytex.world/">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="ru_RU">
 <meta property="og:title" content="KRYTEX — Premium European Auto Care | 高端汽车养护品牌">
 <meta property="og:description" content="陶瓷镀晶、抛光剂与汽车养护产品。诚邀中国经销商与分销商合作。Ceramic coatings & car care. Now open to partners in China.">
-<meta property="og:image" content="img/og-cover.jpg">
+<meta property="og:image" content="https://krytex.world/img/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KRYTEX — Premium European Auto Care | 高端汽车养护品牌">
+<meta name="twitter:description" content="陶瓷镀晶、抛光剂与汽车养护产品。诚邀中国经销商与分销商合作。Ceramic coatings & car care.">
+<meta name="twitter:image" content="https://krytex.world/img/og-cover.jpg">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "KRYTEX",
-  "description": "Premium European auto care chemistry: ceramic coatings, polishes and detailing products.",
-  "logo": "img/logo.png",
-  "sameAs": ["https://www.instagram.com/krytex_official", "https://krytex.pro", "https://krytexgroup.com"]
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://krytex.world/#organization",
+      "name": "KRYTEX",
+      "url": "https://krytex.world/",
+      "description": "Premium European auto care chemistry: ceramic coatings, polishes and detailing products.",
+      "logo": "https://krytex.world/img/logo.png",
+      "sameAs": ["https://www.instagram.com/krytex_official", "https://krytex.pro", "https://krytexgroup.com"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://krytex.world/#website",
+      "url": "https://krytex.world/",
+      "name": "KRYTEX",
+      "inLanguage": ["zh-CN", "en", "ru"],
+      "publisher": { "@id": "https://krytex.world/#organization" }
+    }
+  ]
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -474,21 +496,40 @@
       <p class="lead" data-i18n="form.text"></p>
     </div>
     <div class="rv">
-      <div class="frow">
-        <div class="field"><input type="text" id="f-name" data-i18n-ph="ph.name" required></div>
-        <div class="field"><input type="email" id="f-email" data-i18n-ph="ph.email" required></div>
-      </div>
-      <div class="frow">
-        <div class="field"><input type="tel" id="f-phone" data-i18n-ph="ph.phone" required></div>
-        <div class="field"><input type="text" id="f-company" data-i18n-ph="ph.company"></div>
-      </div>
-      <div class="field"><textarea id="f-msg" data-i18n-ph="ph.msg"></textarea></div>
-      <button class="btn" id="sendBtn" type="button"><span data-i18n="form.btn"></span><span class="arr">→</span></button>
-      <div class="form-ok" id="formOk" data-i18n="form.ok"></div>
+      <div class="form-ok" data-fs-success></div>
+      <div class="form-err" data-fs-error></div>
+      <form id="krytex-form">
+        <div class="frow">
+          <div class="field">
+            <input type="text" id="f-name" name="name" data-i18n-ph="ph.name" data-fs-field required>
+            <span class="field-err" data-fs-error="name"></span>
+          </div>
+          <div class="field">
+            <input type="email" id="f-email" name="email" data-i18n-ph="ph.email" data-fs-field required>
+            <span class="field-err" data-fs-error="email"></span>
+          </div>
+        </div>
+        <div class="frow">
+          <div class="field">
+            <input type="tel" id="f-phone" name="phone" data-i18n-ph="ph.phone" data-fs-field required>
+            <span class="field-err" data-fs-error="phone"></span>
+          </div>
+          <div class="field">
+            <input type="text" id="f-company" name="company" data-i18n-ph="ph.company">
+          </div>
+        </div>
+        <div class="field">
+          <textarea id="f-msg" name="message" data-i18n-ph="ph.msg" data-fs-field></textarea>
+          <span class="field-err" data-fs-error="message"></span>
+        </div>
+        <button class="btn" id="sendBtn" type="submit" data-fs-submit-btn>
+          <span data-i18n="form.btn"></span><span class="arr">→</span>
+        </button>
+      </form>
       <div class="qr-wrap">
         <!-- Замените img/wechat-qr.png на реальный QR-код вашего WeChat аккаунта.
              Сгенерировать: https://qr.io или WeChat → Profile → My QR Code → Share → Save Image -->
-        <a href="weixin://" class="qr-img-wrap" title="WeChat: KRYTEX_official">
+        <a href="weixin://" class="qr-img-wrap" title="WeChat: KRYTEX.WORLD">
           <img src="img/wechat-qr.png" alt="WeChat QR KRYTEX" class="qr-img"
                onerror="this.parentNode.classList.add('qr-fallback');this.remove()">
           <div class="qr-overlay">
@@ -500,7 +541,7 @@
         <div>
           <b data-i18n="qr.t"></b>
           <span data-i18n="qr.d"></span>
-          <span class="qr-id">WeChat: <b>KRYTEX_official</b></span>
+          <span class="qr-id">WeChat: <b>KRYTEX.WORLD</b></span>
         </div>
       </div>
     </div>
@@ -519,7 +560,7 @@
         <h4 data-i18n="foot.contacts"></h4>
         <a href="tel:+78007759844">+7 (800) 775-98-44</a>
         <a href="mailto:info@krytex.pro">info@krytex.pro</a>
-        <p>WeChat: KRYTEX_official</p>
+        <p>WeChat: KRYTEX.WORLD</p>
         <p>Douyin: @KRYTEX</p>
         <a href="https://www.instagram.com/krytex_official" target="_blank" rel="noopener">Instagram: @krytex_official</a>
       </div>
@@ -538,7 +579,7 @@
 
 <!-- ================= FLOATING WECHAT ================= -->
 <div class="fab-wrap" id="fabWechat" aria-label="WeChat">
-  <button class="fab" id="fabBtn" title="WeChat: KRYTEX_official">
+  <button class="fab" id="fabBtn" title="WeChat: KRYTEX.WORLD">
     <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.295.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-5.972 2.938-7.888 1.685-1.144 3.71-1.62 5.707-1.472-.7-3.77-4.113-6.312-8.46-6.312zM5.785 7.33a.96.96 0 0 1 .966-.96.96.96 0 0 1 .965.96.96.96 0 0 1-.965.96.96.96 0 0 1-.966-.96zm5.514 0a.96.96 0 0 1 .966-.96.96.96 0 0 1 .965.96.96.96 0 0 1-.965.96.96.96 0 0 1-.966-.96zM24 14.557c0-3.387-3.2-6.136-7.145-6.136-4.005 0-7.177 2.749-7.177 6.136 0 3.386 3.172 6.135 7.177 6.135.842 0 1.642-.12 2.394-.336a.718.718 0 0 1 .601.082l1.602.937a.274.274 0 0 0 .14.046.248.248 0 0 0 .248-.248c0-.06-.023-.12-.04-.179l-.327-1.245a.498.498 0 0 1 .178-.559C23.047 18.44 24 16.597 24 14.557zm-9.565-1.055a.808.808 0 0 1-.812-.812.808.808 0 0 1 .812-.811.808.808 0 0 1 .812.811.808.808 0 0 1-.812.812zm4.57 0a.808.808 0 0 1-.812-.812.808.808 0 0 1 .812-.811.808.808 0 0 1 .81.811.808.808 0 0 1-.81.812z"/>
     </svg>
@@ -546,11 +587,16 @@
   <div class="fab-tooltip" id="fabTooltip">
     <img src="img/wechat-qr.png" alt="WeChat QR" class="fab-qr"
          onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-    <span class="fab-qr-ph" style="display:none">KRYTEX_official</span>
-    <span class="fab-label">WeChat: KRYTEX_official</span>
+    <span class="fab-qr-ph" style="display:none">KRYTEX.WORLD</span>
+    <span class="fab-label">WeChat: KRYTEX.WORLD</span>
   </div>
 </div>
 
 <script src="js/main.js" defer></script>
+<script>
+  window.formspree = window.formspree || function(){(formspree.q=formspree.q||[]).push(arguments);};
+  formspree('initForm',{formElement:'#krytex-form',formId:'xdavpleq'});
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
