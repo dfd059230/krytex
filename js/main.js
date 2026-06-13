@@ -1,9 +1,9 @@
 const I18N = {
 ru:{
  "nav.about":"О бренде","nav.why":"Почему KRYTEX","nav.products":"Продукция","nav.contact":"Контакты","nav.phone":"Стать партнёром",
- "hero.eyebrow":"Премиальная европейская автохимия · Официально в Китае",
- "hero.title":"Защита и блеск <em>на молекулярном</em> уровне",
- "hero.sub":"KRYTEX — премиальные керамические покрытия, полироли и средства ухода за автомобилем. Открываем сотрудничество с дилерами и дистрибьюторами в Китае.",
+ "hero.eyebrow":"Эксклюзивная партнёрская программа · Китай 2025",
+ "hero.title":"Европейская керамика — <em>локальные цены</em>",
+ "hero.sub":"KRYTEX открывает партнёрскую программу в Китае: производство по европейским формулам, быстрая отгрузка со склада в КНР. Осталось несколько открытых регионов.",
  "hero.cta":"Стать партнёром","hero.cta2":"Продукция",
  "mq":["Керамические покрытия","Полироли","Автошампуни","Антидождь","Воски","Чернители резины","Очистители"],
  "about.title":"Бренд, которому доверяют детейлинг-студии",
@@ -75,16 +75,16 @@ ru:{
  "st4t":"Поставка","st4d":"Отгружаем продукцию в Китай и подключаем маркетинговую поддержку.",
  "form.title":"Оставьте заявку","form.text":"Расскажите о вашей компании и интересующих продуктах — менеджер свяжется с вами в течение одного рабочего дня.",
  "ph.name":"Ваше имя","ph.email":"Электронная почта","ph.phone":"Телефон / WeChat","ph.company":"Название компании","ph.msg":"Сообщение",
- "form.btn":"Отправить заявку","form.ok":"Спасибо! Заявка отправлена — мы свяжемся с вами в ближайшее время.",
+ "form.btn":"Отправить заявку","form.sending":"Отправка…","form.ok":"Спасибо! Заявка отправлена — мы свяжемся с вами в ближайшее время.","form.err":"Ошибка отправки. Пожалуйста, попробуйте ещё раз.",
  "foot.note":"Премиальная автохимия и защитные покрытия для автомобиля.",
  "foot.contacts":"Контакты","foot.company":"Компания","foot.addr":"Адрес офиса / шоурума","foot.req":"Реквизиты компании",
  "foot.rights":"Все права защищены"
 },
 zh:{
  "nav.about":"品牌介绍","nav.why":"为什么选择KRYTEX","nav.products":"产品系列","nav.contact":"联系我们","nav.phone":"成为合作伙伴",
- "hero.eyebrow":"欧洲高端汽车养护品牌 · 正式进入中国市场",
- "hero.title":"分子级的<em>保护与光泽</em>",
- "hero.sub":"KRYTEX——高端陶瓷镀晶、抛光剂与汽车养护产品。现面向中国经销商与分销商开放合作。",
+ "hero.eyebrow":"独家合作伙伴计划 · 中国市场 2025",
+ "hero.title":"欧洲配方陶瓷镀晶—<em>本地价格优势</em>",
+ "hero.sub":"KRYTEX正式在华启动合作伙伴计划:依托欧洲原版配方，中国本地生产，快速发货。部分省份独家名额仍然开放。",
  "hero.cta":"成为合作伙伴","hero.cta2":"产品系列",
  "mq":["陶瓷镀晶","抛光剂","洗车香波","防雨剂","车蜡","轮胎釉","清洁剂"],
  "about.title":"深受专业美容店信赖的品牌",
@@ -156,16 +156,16 @@ zh:{
  "st4t":"发货交付","st4d":"产品发往中国,同步启动营销支持。",
  "form.title":"提交合作申请","form.text":"请介绍您的公司及感兴趣的产品,我们的经理将在一个工作日内与您联系。",
  "ph.name":"您的姓名","ph.email":"电子邮箱","ph.phone":"电话 / 微信","ph.company":"公司名称","ph.msg":"留言内容",
- "form.btn":"提交申请","form.ok":"感谢您的申请!我们将尽快与您联系。",
+ "form.btn":"提交申请","form.sending":"发送中…","form.ok":"感谢您的申请!我们将尽快与您联系。","form.err":"发送失败,请重试。",
  "foot.note":"高端汽车养护化学品与防护涂层。",
  "foot.contacts":"联系方式","foot.company":"公司信息","foot.addr":"办公室 / 展厅地址","foot.req":"公司注册信息",
  "foot.rights":"版权所有"
 },
 en:{
  "nav.about":"About","nav.why":"Why KRYTEX","nav.products":"Products","nav.contact":"Contact","nav.phone":"Become a partner",
- "hero.eyebrow":"Premium European auto care · Officially in China",
- "hero.title":"Protection and gloss <em>at the molecular</em> level",
- "hero.sub":"KRYTEX — premium ceramic coatings, polishes and car care products. Now open to dealers and distributors across China.",
+ "hero.eyebrow":"Exclusive partner program · China 2025",
+ "hero.title":"European ceramic coatings — <em>local pricing</em>",
+ "hero.sub":"KRYTEX launches its China partner program: European formulas, manufactured locally in China, fast warehouse shipping. A few exclusive regional slots still available.",
  "hero.cta":"Become a partner","hero.cta2":"Products",
  "mq":["Ceramic coatings","Polishes","Car shampoos","Rain repellents","Waxes","Tire dressings","Cleaners"],
  "about.title":"A brand trusted by detailing studios",
@@ -237,7 +237,7 @@ en:{
  "st4t":"Delivery","st4d":"We ship the products to China and activate marketing support.",
  "form.title":"Send a request","form.text":"Tell us about your company and the products you are interested in — our manager will reply within one business day.",
  "ph.name":"Your name","ph.email":"Email","ph.phone":"Phone / WeChat","ph.company":"Company name","ph.msg":"Message",
- "form.btn":"Send request","form.ok":"Thank you! Your request has been sent — we will contact you shortly.",
+ "form.btn":"Send request","form.sending":"Sending…","form.ok":"Thank you! Your request has been sent — we will contact you shortly.","form.err":"Sending failed. Please try again.",
  "foot.note":"Premium car care chemistry and protective coatings.",
  "foot.contacts":"Contacts","foot.company":"Company","foot.addr":"Office / showroom address","foot.req":"Company details",
  "foot.rights":"All rights reserved"
@@ -469,16 +469,83 @@ function setupCities(){
   upd();
 })();
 
-// form (demo: no backend connected yet)
-document.getElementById("sendBtn").addEventListener("click",()=>{
-  const name = document.getElementById("f-name").value.trim();
-  const email = document.getElementById("f-email").value.trim();
-  const phone = document.getElementById("f-phone").value.trim();
-  if(!name || !email || !phone){
-    [["f-name",name],["f-email",email],["f-phone",phone]].forEach(([id,v])=>{
-      document.getElementById(id).style.borderColor = v ? "" : "var(--red)";
+// ── FLOATING WECHAT ───────────────────────────────────────────────────────
+(function(){
+  var wrap = document.getElementById('fabWechat');
+  var btn  = document.getElementById('fabBtn');
+  if(!wrap || !btn) return;
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    wrap.classList.toggle('open');
+  });
+  document.addEventListener('click', function(e){
+    if(!wrap.contains(e.target)) wrap.classList.remove('open');
+  });
+})();
+
+// ── FORM ──────────────────────────────────────────────────────────────────
+// Formspree: зарегистрируйтесь на https://formspree.io → New Form → скопируйте endpoint.
+// Замените строку ниже на свой адрес вида https://formspree.io/f/XXXXXXXX
+const FORM_ENDPOINT = "https://formspree.io/f/REPLACE_WITH_YOUR_ID";
+
+(function(){
+  var btn  = document.getElementById("sendBtn");
+  var ok   = document.getElementById("formOk");
+  var fields = {name:"f-name", email:"f-email", phone:"f-phone"};
+
+  function validate(){
+    var pass = true;
+    Object.entries(fields).forEach(function([,id]){
+      var el = document.getElementById(id);
+      var v  = el.value.trim();
+      el.style.borderColor = v ? "" : "var(--red)";
+      if(!v) pass = false;
     });
-    return;
+    return pass;
   }
-  document.getElementById("formOk").classList.add("show");
-});
+
+  function setLoading(on){
+    btn.disabled = on;
+    var span = btn.querySelector("span[data-i18n='form.btn']");
+    if(span) span.textContent = on
+      ? (I18N[lang]["form.sending"] || "…")
+      : (I18N[lang]["form.btn"] || "Send");
+  }
+
+  btn.addEventListener("click", function(){
+    if(!validate()) return;
+
+    var payload = {
+      name:    document.getElementById("f-name").value.trim(),
+      email:   document.getElementById("f-email").value.trim(),
+      phone:   document.getElementById("f-phone").value.trim(),
+      company: document.getElementById("f-company").value.trim(),
+      message: document.getElementById("f-msg").value.trim(),
+      lang:    lang
+    };
+
+    setLoading(true);
+    fetch(FORM_ENDPOINT, {
+      method: "POST",
+      headers: {"Content-Type":"application/json", "Accept":"application/json"},
+      body: JSON.stringify(payload)
+    })
+    .then(function(r){
+      if(r.ok){
+        ok.classList.add("show");
+        ["f-name","f-email","f-phone","f-company","f-msg"].forEach(function(id){
+          document.getElementById(id).value = "";
+        });
+      } else {
+        return r.json().then(function(d){ throw new Error(d.error || r.status); });
+      }
+    })
+    .catch(function(err){
+      console.error("Form error:", err);
+      ok.style.color = "#ff6b6b";
+      ok.textContent = I18N[lang]["form.err"] || "Error. Please try again.";
+      ok.classList.add("show");
+    })
+    .finally(function(){ setLoading(false); });
+  });
+})();
