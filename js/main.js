@@ -25,14 +25,15 @@ ru:{
  "q.text":"Мы создаём химию, которой доверяют профессионалы по всему миру. Китайский рынок — наш стратегический приоритет, и мы готовы инвестировать в успех каждого партнёра.",
  "q.name":"Килов Булат","q.role":"Основатель бренда KRYTEX",
  "prod.title":"Флагманская продукция","prod.sub":"Профессиональные составы для защиты, мойки и ухода за автомобилем. Полная линейка — в каталоге.",
- "p1tag":"Флагман","p1sub":"Базовое нанокерамическое покрытие для кузова (Base Coat)","p1dur":"до 12 мес / 48 моек",
- "p2tag":"Антидождь","p2sub":"Покрытие для стёкол и зеркал","p2dur":"6 мес / 48 моек","p2clean":"от 40 км/ч",
- "p3tag":"Бестселлер","p3sub":"Нанокерамическое покрытие для кузова","p3dur":"до 6 мес / 24 мойки",
-  "p4tag":"Кожа","p4sub":"Нанопокрытие для кожи салона","p4dur":"до 6 месяцев",
- "p6tag":"Для автомоек","p6sub":"Углеродное защитное покрытие (линейка KRYTEX ONE)","p6dur":"20 моек / 10 000 км / 3 мес",
- "p5tag":"PPF и винил","p5sub":"Защитное покрытие для плёнок PPF и винила","p5dur":"до 6 мес / 24 мойки",
- "sp.cons":"Расход",
- "sp.hard":"Твёрдость (Моос/Шор)","sp.dur":"Долговечность","sp.vol":"Объём","sp.angle":"Угол смачивания","sp.layer":"Толщина слоя","sp.light":"Светопропускание","sp.clean":"Самоочищение",
+ "p1tag":"Скоро в продаже","p1sub":"Титановое защитное покрытие для ЛКП","p1type":"Титановое покрытие","p1dur":"от 100 моек / 40 000 км / 24 мес",
+ "p2tag":"Ткань и кожа","p2sub":"Нанокерамическое покрытие для ткани и кожи","p2type":"Нанокерамика","p2dur":"6 месяцев",
+ "p3tag":"Бестселлер","p3sub":"Нанокерамическое покрытие для кузова (Top Coat)","p3type":"Top Coat","p3dur":"до 6 мес / 24 мойки",
+ "p4tag":"Скоро в продаже","p4sub":"Нанокерамическое покрытие для кузова (Top Coat)","p4type":"Top Coat","p4dur":"9 месяцев / 36 моек",
+ "p5tag":"Базовое покрытие","p5sub":"Нанокерамическое базовое покрытие для ЛКП","p5type":"Base Coat","p5dur":"до 12 мес / 48 моек",
+ "p6tag":"Бестселлер","p6sub":"Нанокерамическое покрытие для стёкол и зеркал","p6type":"Нанокерамика","p6dur":"8–12 мес / 96 моек",
+ "p7tag":"PPF и винил","p7sub":"Защитное покрытие для плёнок PPF и винила","p7type":"Нанокерамика","p7dur":"до 6 мес / 24 мойки",
+ "sp.cons":"Расход","sp.type":"Тип состава","sp.ph":"Стойкость к кислотам/щёлочи",
+ "sp.dur":"Долговечность","sp.vol":"Объём","sp.angle":"Краевой угол",
  "price":"Уточнить цену","p.btn":"Запросить прайс",
   "nav.partner":"Партнёрам",
  "demo.title":"Эффект, который видно","demo.sub":"Реальные съёмки: глянец покрытия, гидрофобный эффект и процесс нанесения состава.","demo.t1":"Глянец кузова","demo.t2":"Гидрофобный эффект","demo.t3":"Нанесение",
@@ -77,7 +78,7 @@ ru:{
  "ph.name":"Ваше имя","ph.email":"Электронная почта","ph.phone":"Телефон / WeChat","ph.company":"Название компании","ph.msg":"Сообщение",
  "form.btn":"Отправить заявку","form.sending":"Отправка…","form.ok":"Спасибо! Заявка отправлена — мы свяжемся с вами в ближайшее время.","form.err":"Ошибка отправки. Пожалуйста, попробуйте ещё раз.",
  "foot.note":"Премиальная автохимия и защитные покрытия для автомобиля.",
- "foot.contacts":"Контакты","foot.company":"Компания","foot.addr":"Адрес офиса / шоурума","foot.req":"Реквизиты компании",
+ "foot.contacts":"Контакты","foot.company":"Компания","foot.coname":"Гуанчжоу Кэжуйтай Дэйли Кемикал Текнолоджи Ко., Лтд.","foot.coaddr":"оф. 209, корп. 9, парк Хунли Чжихуэй, ул. Сянькэ-1, д. 1, пос. Хуадун, р-н Хуаду, г. Гуанчжоу",
  "foot.rights":"Все права защищены"
 },
 zh:{
@@ -106,14 +107,15 @@ zh:{
  "q.text":"我们打造的是全球专业人士信赖的养护产品。中国市场是我们的战略重点,我们愿意为每一位合作伙伴的成功投入资源。",
  "q.name":"布拉特·基洛夫 (Bulat Kilov)","q.role":"KRYTEX品牌创始人",
  "prod.title":"旗舰产品","prod.sub":"用于车身保护、清洗与养护的专业配方。完整产品线请查阅产品目录。",
- "p1tag":"旗舰款","p1sub":"车身纳米陶瓷底层镀晶(Base Coat)","p1dur":"长达12个月 / 48次洗车",
- "p2tag":"防雨镀膜","p2sub":"玻璃与后视镜防护镀膜","p2dur":"6个月 / 48次洗车","p2clean":"车速40 km/h以上",
- "p3tag":"畅销款","p3sub":"车身纳米陶瓷镀晶","p3dur":"长达6个月 / 24次洗车",
-  "p4tag":"皮革","p4sub":"内饰皮革纳米镀膜","p4dur":"长达6个月",
- "p6tag":"洗车房专用","p6sub":"碳保护镀膜(KRYTEX ONE系列)","p6dur":"20次洗车 / 10000公里 / 3个月",
- "p5tag":"PPF与改色膜","p5sub":"PPF漆面保护膜与改色膜专用镀晶","p5dur":"长达6个月 / 24次洗车",
- "sp.cons":"用量",
- "sp.hard":"硬度(莫氏/邵氏)","sp.dur":"防护时长","sp.vol":"容量","sp.angle":"疏水角","sp.layer":"单层厚度","sp.light":"透光率","sp.clean":"自清洁效果",
+ "p1tag":"即将上市","p1sub":"车漆钛能防护镀膜","p1type":"钛能镀膜","p1dur":"100+次洗车 / 40000公里 / 24个月",
+ "p2tag":"织物与皮革","p2sub":"织物与皮革纳米陶瓷镀膜","p2type":"纳米陶瓷镀膜","p2dur":"6个月",
+ "p3tag":"畅销款","p3sub":"车身纳米陶瓷镀膜(Top Coat)","p3type":"Top Coat","p3dur":"长达6个月 / 24次洗车",
+ "p4tag":"即将上市","p4sub":"车身纳米陶瓷镀膜(Top Coat)","p4type":"Top Coat","p4dur":"9个月 / 36次洗车",
+ "p5tag":"底层镀膜","p5sub":"车漆纳米陶瓷底层镀膜","p5type":"Base Coat","p5dur":"长达12个月 / 48次洗车",
+ "p6tag":"畅销款","p6sub":"玻璃与后视镜纳米陶瓷镀膜","p6type":"纳米陶瓷镀膜","p6dur":"8–12个月 / 96次洗车",
+ "p7tag":"PPF与改色膜","p7sub":"PPF与改色膜专用防护镀膜","p7type":"纳米陶瓷镀膜","p7dur":"长达6个月 / 24次洗车",
+ "sp.cons":"用量","sp.type":"配方类型","sp.ph":"耐酸碱性",
+ "sp.dur":"防护时长","sp.vol":"容量","sp.angle":"接触角",
  "price":"请询价","p.btn":"索取报价",
   "nav.partner":"合作条款",
  "demo.title":"看得见的效果","demo.sub":"真实拍摄:镀晶光泽、疏水效果与施工全过程。","demo.t1":"车身光泽","demo.t2":"疏水效果","demo.t3":"施工过程",
@@ -158,7 +160,7 @@ zh:{
  "ph.name":"您的姓名","ph.email":"电子邮箱","ph.phone":"电话 / 微信","ph.company":"公司名称","ph.msg":"留言内容",
  "form.btn":"提交申请","form.sending":"发送中…","form.ok":"感谢您的申请!我们将尽快与您联系。","form.err":"发送失败,请重试。",
  "foot.note":"高端汽车养护化学品与防护涂层。",
- "foot.contacts":"联系方式","foot.company":"公司信息","foot.addr":"办公室 / 展厅地址","foot.req":"公司注册信息",
+ "foot.contacts":"联系方式","foot.company":"公司信息","foot.coname":"广州市科锐泰日化科技有限公司","foot.coaddr":"广州市花都区花东镇先科一路1号鸿利智汇园9号楼209",
  "foot.rights":"版权所有"
 },
 en:{
@@ -187,14 +189,15 @@ en:{
  "q.text":"We make chemistry that professionals around the world trust. The Chinese market is our strategic priority, and we are ready to invest in every partner's success.",
  "q.name":"Bulat Kilov","q.role":"Founder, KRYTEX",
  "prod.title":"Flagship products","prod.sub":"Professional formulas for protection, washing and care. See the full range in the catalog.",
- "p1tag":"Flagship","p1sub":"Nano-ceramic base coat for car body (Base Coat)","p1dur":"up to 12 months / 48 washes",
- "p2tag":"Anti-rain","p2sub":"Coating for glass and mirrors","p2dur":"6 months / 48 washes","p2clean":"above 40 km/h",
- "p3tag":"Bestseller","p3sub":"Nano-ceramic body coating","p3dur":"up to 6 months / 24 washes",
-  "p4tag":"Leather","p4sub":"Nano coating for leather interiors","p4dur":"up to 6 months",
- "p6tag":"For car washes","p6sub":"Carbon protective coating (KRYTEX ONE line)","p6dur":"20 washes / 10,000 km / 3 months",
- "p5tag":"PPF & vinyl","p5sub":"Protective coating for PPF and vinyl films","p5dur":"up to 6 months / 24 washes",
- "sp.cons":"Consumption",
- "sp.hard":"Hardness (Mohs/Shore)","sp.dur":"Durability","sp.vol":"Volume","sp.angle":"Contact angle","sp.layer":"Layer thickness","sp.light":"Light transmission","sp.clean":"Self-cleaning",
+ "p1tag":"Coming soon","p1sub":"Titanium protective coating for car paint","p1type":"Titanium coating","p1dur":"100+ washes / 40,000 km / 24 months",
+ "p2tag":"Fabric & leather","p2sub":"Nano-ceramic coating for fabric & leather","p2type":"Nano-ceramic","p2dur":"6 months",
+ "p3tag":"Bestseller","p3sub":"Nano-ceramic body coating (Top Coat)","p3type":"Top Coat","p3dur":"up to 6 months / 24 washes",
+ "p4tag":"Coming soon","p4sub":"Nano-ceramic body coating (Top Coat)","p4type":"Top Coat","p4dur":"9 months / 36 washes",
+ "p5tag":"Base coat","p5sub":"Nano-ceramic base coat for car paint","p5type":"Base Coat","p5dur":"up to 12 months / 48 washes",
+ "p6tag":"Bestseller","p6sub":"Nano-ceramic coating for glass & mirrors","p6type":"Nano-ceramic","p6dur":"8–12 months / 96 washes",
+ "p7tag":"PPF & vinyl","p7sub":"Protective coating for PPF & vinyl films","p7type":"Nano-ceramic","p7dur":"up to 6 months / 24 washes",
+ "sp.cons":"Consumption","sp.type":"Composition","sp.ph":"Acid/alkali resistance",
+ "sp.dur":"Durability","sp.vol":"Volume","sp.angle":"Contact angle",
  "price":"Price on request","p.btn":"Request price list",
   "nav.partner":"For partners",
  "demo.title":"An effect you can see","demo.sub":"Real footage: coating gloss, the hydrophobic effect and the application process.","demo.t1":"Body gloss","demo.t2":"Hydrophobic effect","demo.t3":"Application",
@@ -239,7 +242,7 @@ en:{
  "ph.name":"Your name","ph.email":"Email","ph.phone":"Phone / WeChat","ph.company":"Company name","ph.msg":"Message",
  "form.btn":"Send request","form.sending":"Sending…","form.ok":"Thank you! Your request has been sent — we will contact you shortly.","form.err":"Sending failed. Please try again.",
  "foot.note":"Premium car care chemistry and protective coatings.",
- "foot.contacts":"Contacts","foot.company":"Company","foot.addr":"Office / showroom address","foot.req":"Company details",
+ "foot.contacts":"Contacts","foot.company":"Company","foot.coname":"Guangzhou Keruitai Daily Chemical Technology Co., Ltd.","foot.coaddr":"Room 209, Building 9, Hongli Zhihui Park, No.1 Xianke 1st Rd, Huadong Town, Huadu District, Guangzhou",
  "foot.rights":"All rights reserved"
 }
 };
@@ -525,4 +528,25 @@ function setupCities(){
     localize(okEl,  "form.ok");
     localize(errEl, "form.err");
   };
+})();
+
+// ── QR LIGHTBOX (контакты) ─────────────────────────────────────────────────
+// Десктоп: клик по мелкому QR открывает крупный — его сканируют телефоном.
+// Мобильный: не мешаем ссылке weixin:// открыть приложение WeChat напрямую.
+(function(){
+  var wrap = document.querySelector('.contact .qr-img-wrap');
+  var box  = document.getElementById('qrLightbox');
+  if(!wrap || !box) return;
+  var isDesktop = function(){ return window.matchMedia('(min-width:961px)').matches; };
+  function open(){ box.classList.add('open'); box.setAttribute('aria-hidden','false'); }
+  function close(){ box.classList.remove('open'); box.setAttribute('aria-hidden','true'); }
+  wrap.addEventListener('click', function(e){
+    if(isDesktop()){ e.preventDefault(); open(); }
+  });
+  box.addEventListener('click', function(e){
+    if(e.target === box || e.target.closest('[data-qr-close]')) close();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && box.classList.contains('open')) close();
+  });
 })();

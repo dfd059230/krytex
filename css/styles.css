@@ -143,6 +143,9 @@ header{
   border:1px solid var(--red);z-index:-1;
 }
 .noimg{background:linear-gradient(135deg,#1a1a1d,#0e0e10 60%,#2a0503);min-height:320px;}
+/* фолбэк фото товара: перебиваем белый фон .pimg тёмным фирменным плейсхолдером */
+.pimg.noimg{background:linear-gradient(135deg,#1a1a1d,#0e0e10 60%,#2a0503);display:grid;place-items:center;}
+.pimg.noimg::after{content:"KRYTEX";font-family:var(--display);font-size:13px;font-weight:700;letter-spacing:.18em;color:var(--line);}
 
 /* ===== stats ===== */
 .stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:0;}
@@ -210,9 +213,9 @@ header{
 .prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .pcard{background:var(--panel);border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .3s,border-color .3s;}
 .pcard:hover{transform:translateY(-6px);border-color:rgba(225,6,0,.55);}
-.pimg{height:290px;overflow:hidden;position:relative;background:#fff;}
-.pimg img{width:100%;height:100%;object-fit:contain;transform:scale(1.38);filter:contrast(1.06) saturate(1.08);transition:transform .6s;}
-.pcard:hover .pimg img{transform:scale(1.5);}
+.pimg{height:290px;overflow:hidden;position:relative;background:#fff;padding:26px 20px;}
+.pimg img{width:100%;height:100%;object-fit:contain;transform:scale(1);filter:contrast(1.06) saturate(1.08);transition:transform .6s;}
+.pcard:hover .pimg img{transform:scale(1.06);}
 .ptag{
   position:absolute;top:14px;left:14px;background:var(--red);color:#fff;
   font-family:var(--display);font-size:10.5px;font-weight:700;letter-spacing:.1em;
@@ -233,15 +236,16 @@ header{
   grid-column: 1 / -1;
   display:grid;
   grid-template-columns:1fr 1fr;
+  align-items:center;
 }
 .pcard--featured .pimg{
-  height:100%;
-  min-height:320px;
+  height:300px;
+  min-height:0;
 }
 .pcard--featured .pimg img{
-  transform:scale(1.12);
+  transform:scale(1);
 }
-.pcard--featured:hover .pimg img{transform:scale(1.22);}
+.pcard--featured:hover .pimg img{transform:scale(1.05);}
 .pcard--featured .pbody{
   padding:36px 36px 36px;
   justify-content:center;
@@ -261,7 +265,7 @@ header{
 }
 @media(max-width:960px){
   .pcard--featured{grid-template-columns:1fr;grid-column:auto;}
-  .pcard--featured .pimg{min-height:260px;}
+  .pcard--featured .pimg{height:290px;min-height:0;}
   .pfeat-specs{grid-template-columns:1fr;}
 }
 
@@ -378,6 +382,30 @@ footer .logo img{height:24px;}
 .qr-wrap span{color:var(--muted);font-size:13px;}
 .qr-id{color:var(--muted);font-size:12.5px;margin-top:2px;}
 .qr-id b{font-size:12.5px;color:var(--text);display:inline;}
+/* на десктопе курсор-лупа подсказывает увеличение */
+@media(min-width:961px){.qr-img-wrap{cursor:zoom-in;}}
+
+/* ===== QR lightbox (увеличение по клику в контактах) ===== */
+.qr-lightbox{position:fixed;inset:0;z-index:1100;display:none;place-items:center;padding:24px;
+  background:rgba(10,10,11,.85);backdrop-filter:blur(8px);}
+.qr-lightbox.open{display:grid;animation:qrFade .25s ease;}
+@keyframes qrFade{from{opacity:0;}to{opacity:1;}}
+.qr-lightbox-card{position:relative;background:#fff;padding:28px;
+  display:flex;flex-direction:column;align-items:center;gap:18px;
+  clip-path:polygon(0 0,100% 0,100% calc(100% - 24px),calc(100% - 24px) 100%,0 100%);
+  animation:qrPop .3s cubic-bezier(.22,1,.36,1);}
+@keyframes qrPop{from{transform:scale(.92);opacity:0;}to{transform:none;opacity:1;}}
+.qr-lightbox-card img{width:min(72vw,300px);height:auto;display:block;}
+.qr-lightbox-id{font-family:var(--display);font-size:13px;font-weight:700;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--ink);}
+.qr-lightbox-id b{color:var(--red);}
+.qr-lightbox-close{position:absolute;top:-1px;right:-1px;width:40px;height:40px;border:none;cursor:pointer;
+  background:var(--red);color:#fff;font-size:20px;line-height:1;display:grid;place-items:center;
+  clip-path:polygon(0 0,100% 0,100% 100%,calc(100% - 14px) 100%);transition:background .2s;}
+.qr-lightbox-close:hover{background:var(--red-deep);}
+@media (prefers-reduced-motion:reduce){
+  .qr-lightbox.open,.qr-lightbox-card{animation:none;}
+}
 
 @media(max-width:960px){
   .tiers,.reviews,.certs,.acad{grid-template-columns:1fr 1fr;}
