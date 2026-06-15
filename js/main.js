@@ -247,7 +247,7 @@ en:{
 }
 };
 
-let lang = "zh";
+let lang = (typeof window !== "undefined" && window.KRX_LANG) ? window.KRX_LANG : "zh";
 const META = {
   zh: ["KRYTEX——欧洲高端汽车养护品牌 | 陶瓷镀晶·诚邀合作", "KRYTEX——欧洲高端汽车养护品牌:陶瓷镀晶、抛光剂与养护产品。正式进入中国市场,诚邀经销商与分销商合作。"],
   ru: ["KRYTEX — премиальная европейская автохимия | Партнёрам в Китае", "KRYTEX — керамические покрытия, полироли и автохимия премиум-класса. Открываем сотрудничество с дилерами и дистрибьюторами в Китае."],
@@ -283,7 +283,7 @@ function applyLang(l){
 document.querySelectorAll(".langs button").forEach(b=>{
   b.addEventListener("click",()=>applyLang(b.getAttribute("data-lang")));
 });
-applyLang("zh");
+applyLang(lang);
 
 // mobile menu
 const burger = document.getElementById("burger");
