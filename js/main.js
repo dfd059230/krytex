@@ -1,7 +1,7 @@
 const I18N = {
 ru:{
  "nav.about":"О бренде","nav.why":"Почему KRYTEX","nav.products":"Продукция","nav.contact":"Контакты","nav.phone":"Стать партнёром",
- "hero.eyebrow":"Эксклюзивная партнёрская программа · Китай 2025",
+ "hero.eyebrow":"Эксклюзивная партнёрская программа · Китай 2026",
  "hero.title":"Европейская керамика — <em>локальные цены</em>",
  "hero.sub":"KRYTEX открывает партнёрскую программу в Китае: производство по европейским формулам, быстрая отгрузка со склада в КНР. Осталось несколько открытых регионов.",
  "hero.cta":"Стать партнёром","hero.cta2":"Продукция",
@@ -83,7 +83,7 @@ ru:{
 },
 zh:{
  "nav.about":"品牌介绍","nav.why":"为什么选择KRYTEX","nav.products":"产品系列","nav.contact":"联系我们","nav.phone":"成为合作伙伴",
- "hero.eyebrow":"独家合作伙伴计划 · 中国市场 2025",
+ "hero.eyebrow":"独家合作伙伴计划 · 中国市场 2026",
  "hero.title":"欧洲配方陶瓷镀晶—<em>本地价格优势</em>",
  "hero.sub":"KRYTEX正式在华启动合作伙伴计划:依托欧洲原版配方，中国本地生产，快速发货。部分省份独家名额仍然开放。",
  "hero.cta":"成为合作伙伴","hero.cta2":"产品系列",
@@ -165,7 +165,7 @@ zh:{
 },
 en:{
  "nav.about":"About","nav.why":"Why KRYTEX","nav.products":"Products","nav.contact":"Contact","nav.phone":"Become a partner",
- "hero.eyebrow":"Exclusive partner program · China 2025",
+ "hero.eyebrow":"Exclusive partner program · China 2026",
  "hero.title":"European ceramic coatings — <em>local pricing</em>",
  "hero.sub":"KRYTEX launches its China partner program: European formulas, manufactured locally in China, fast warehouse shipping. A few exclusive regional slots still available.",
  "hero.cta":"Become a partner","hero.cta2":"Products",

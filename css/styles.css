@@ -213,8 +213,8 @@ header{
 .prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .pcard{background:var(--panel);border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .3s,border-color .3s;}
 .pcard:hover{transform:translateY(-6px);border-color:rgba(225,6,0,.55);}
-.pimg{height:290px;overflow:hidden;position:relative;background:#fff;padding:26px 20px;}
-.pimg img{width:100%;height:100%;object-fit:contain;transform:scale(1);filter:contrast(1.06) saturate(1.08);transition:transform .6s;}
+.pimg{height:290px;overflow:hidden;position:relative;background:radial-gradient(120% 82% at 50% 14%,#ffffff 0%,#eceef1 72%,#e3e5e9 100%);padding:26px 20px;}
+.pimg img{width:100%;height:100%;object-fit:contain;transform:scale(1);filter:drop-shadow(0 12px 16px rgba(0,0,0,.26));transition:transform .6s;}
 .pcard:hover .pimg img{transform:scale(1.06);}
 .ptag{
   position:absolute;top:14px;left:14px;background:var(--red);color:#fff;
