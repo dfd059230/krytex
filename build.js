@@ -53,8 +53,10 @@ const SWITCH = { zh: "中文", en: "EN", ru: "RU" };
 const ORDER = ["zh", "en", "ru"];
 
 function langsHtml(cur) {
+  const sub = cur !== "zh"; // subdir pages live one level deep
+  const href = (l) => (l === "zh" ? (sub ? "../" : "./") : (sub ? "../" : "") + l + "/");
   const links = ORDER.map((l) =>
-    `      <a href="${l === "zh" ? "/" : "/" + l + "/"}" hreflang="${HTML_LANG[l]}"${l === cur ? ' class="on" aria-current="page"' : ""}>${SWITCH[l]}</a>`
+    `      <a href="${href(l)}" hreflang="${HTML_LANG[l]}"${l === cur ? ' class="on" aria-current="page"' : ""}>${SWITCH[l]}</a>`
   ).join("\n");
   return `<div class="langs" role="group" aria-label="Language">\n${links}\n    </div>`;
 }
@@ -81,8 +83,10 @@ function bake(html, dict) {
 
 function buildPage(lang) {
   let h = template;
-  // root-relative asset paths so subdirectory pages resolve correctly
-  h = h.replace(/(\b(?:href|src|poster)=")(img\/|css\/|js\/|krytex-)/g, "$1/$2");
+  // relative asset paths so the site works at domain root AND under a subpath
+  // (e.g. GitHub Pages project URL /krytex/). Subdir pages need a ../ prefix.
+  const rel = lang === "zh" ? "" : "../";
+  h = h.replace(/(\b(?:href|src|poster)=")(img\/|css\/|js\/|krytex-)/g, `$1${rel}$2`);
   // <html lang>
   h = h.replace(/<html lang="[^"]*">/, `<html lang="${HTML_LANG[lang]}">`);
   // head meta
@@ -103,7 +107,7 @@ function buildPage(lang) {
   // language switcher -> links
   h = h.replace(/<div class="langs"[\s\S]*?<\/div>/, langsHtml(lang));
   // page language for main.js hydration
-  h = h.replace(/<script src="\/js\/main\.js" defer><\/script>/, `<script>window.KRX_LANG=${JSON.stringify(lang)};</script>\n<script src="/js/main.js" defer></script>`);
+  h = h.replace(new RegExp(`<script src="${rel}js/main\\.js" defer></script>`), `<script>window.KRX_LANG=${JSON.stringify(lang)};</script>\n<script src="${rel}js/main.js" defer></script>`);
   // bake all translatable text
   h = bake(h, I18N[lang]);
   return h;
